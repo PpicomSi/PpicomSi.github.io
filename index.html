@@ -1,66 +1,97 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>now developing...</title>
-  <meta name="description" content="now developing...">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BruhAhhchive — 대규모 학원 멀티플레이 FPS</title>
+  <meta name="description" content="BruhAhhchive는 블루아카이브 세계관을 바탕으로 한 1인칭 멀티플레이 게임입니다. 키보토스에서 대규모 학원 슈터를 경험해 보세요." />
+  <meta property="og:title" content="BruhAhhchive" />
+  <meta property="og:description" content="블루아카이브의 2차창작 1인칭 멀티플레이 게임. 키보토스에 뛰어들어 대규모 학원 슈터를 경험하세요." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bruhahhchive.site/" />
+  <meta name="color-scheme" content="dark light" />
   <style>
-    html, body { height: 100%; margin: 0; }
-    body {
-      display: grid;
-      place-items: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: #0b0b0c;
-      color: #eaeaf0;
-    }
-    .card {
-      text-align: center;
-      padding: 2.5rem 3rem;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.04);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-    }
-    h1 {
-      margin: 0 0 .5rem 0;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-    p {
-      margin: 0;
-      opacity: .75;
-    }
-    .dotdotdot::after {
-      content: "…";
-      animation: dots 1.2s steps(4, end) infinite;
-    }
-    @keyframes dots {
-      0% { content: ""; }
-      33% { content: "."; }
-      66% { content: ".."; }
-      100% { content: "..."; }
-    }
-    footer {
-      position: fixed;
-      bottom: 12px;
-      left: 0; right: 0;
-      text-align: center;
-      font-size: 12px;
-      opacity: .5;
-    }
+    :root { --bg: #0b0d10; --fg: #e8eef5; --muted:#9fb3c8; --accent:#84cc16; --card:#12151a; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans KR, Apple SD Gothic Neo, sans-serif; background: var(--bg); color: var(--fg); }
+    header { position:relative; overflow:hidden; text-align:center; }
+    header img.hero-bg { width:100%; height:60vh; object-fit:cover; filter:brightness(0.4); }
+    header .overlay { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+    header h1 { font-size: clamp(28px, 5vw, 44px); margin: 0; }
+    header p { color: var(--muted); margin-top: 12px; }
+    .pill { display:inline-block; margin-bottom:12px; padding:6px 12px; border-radius:999px; background:#1c2027; color:#cfe4ff; font-size:12px; letter-spacing:.02em; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 40px 20px 64px; }
+    .grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); }
+    .card { background: var(--card); border: 1px solid #1c2027; border-radius: 16px; overflow:hidden; }
+    .card img { width:100%; height:220px; object-fit:cover; }
+    .card-content { padding:18px; }
+    h2 { font-size: clamp(22px, 3vw, 28px); margin-top:48px; margin-bottom:16px; }
+    .muted { color: var(--muted); }
+    a.button { display:inline-block; margin-top:14px; padding:12px 16px; border-radius:12px; background: var(--accent); color:#0b0d10; text-decoration:none; font-weight:600; }
+    footer { border-top:1px solid #1c2027; margin-top:60px; padding:20px; font-size:14px; color: var(--muted); display:flex; gap:12px; flex-wrap:wrap; justify-content:space-between; align-items:center; }
+    footer nav a { color: var(--muted); text-decoration:none; margin-right:12px; }
+    .tiny { font-size:12px; opacity:.8; }
   </style>
 </head>
 <body>
-  <main class="card" role="main" aria-label="페이지 준비중">
-    <h1>now developing<span class="dotdotdot"></span></h1>
-    <p>See you soon.</p>
+  <header>
+    <img src="assets/hero.jpg" alt="키보토스 전장 이미지" class="hero-bg">
+    <div class="overlay">
+      <div class="pill">BruhAhhchive</div>
+      <h1>키보토스에 뛰어들어<br>대규모 학원 멀티플레이 슈터를 경험하세요</h1>
+      <p>블루아카이브의 2차창작 1인칭 멀티플레이 게임입니다.</p>
+      <a href="#features" class="button">주요 특징 보기</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <p class="muted">
+        BruhAhhchive는 블루아카이브 세계관에서 영감을 받은 비상업적 팬메이드 프로젝트로, 친구들과 함께 즐기는 멀티플레이 FPS 경험을 목표로 합니다.
+      </p>
+    </section>
+
+    <section id="features">
+      <h2>주요 특징</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="assets/teamfight.jpg" alt="대규모 멀티플레이 전투">
+          <div class="card-content">
+            <h3>대규모 멀티플레이</h3>
+            <p class="muted">키보토스의 다양한 학원들이 참전하는 대규모 전투. 목표 점령, 팀 데스매치 등 다양한 모드 지원.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/loadout.jpg" alt="커스터마이징 UI">
+          <div class="card-content">
+            <h3>커스터마이징</h3>
+            <p class="muted">커스터마이징 가능한 캐릭터와 장비들. 플레이 스타일에 맞춘 로드아웃 구성.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <section id="status">
+      <h2>개발 현황</h2>
+      <div class="card">
+        <div class="card-content">
+          <p class="muted">현재 비공식 테스트 단계입니다. 배포 시점과 빌드 정보는 본 사이트에 공지됩니다.</p>
+        </div>
+      </div>
+    </section>
   </main>
+
   <footer>
+<<<<<<< Updated upstream
     © Peroro Edu <span id="y"></span>
+=======
+    <nav>
+      <a href="/privacy-policy.html">개인정보처리방침</a>
+      <a href="/">홈</a>
+    </nav>
+    <div class="tiny">© 2025 BruhAhhchive — Fanmade, Non-commercial.</div>
+>>>>>>> Stashed changes
   </footer>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
